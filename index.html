@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="height=device-height, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="#">
+        <title>Catálogo de productos</title>
+    </head>
+    <body>
+        <header class="encabezado">
+            <nav>
+                <button type="button" class="btn-atras"><img class="logobtn" src="./images/logoSinFondoRecortada.png" alt=""></button>
+                <input type="text" class="search-bar" placeholder="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <select class="filter-bar">
+                    <option  selected value="default">Filtrar...</option>
+                    <optgroup label="Precio">
+                        <option value="ascendente">Precio ascendente</option>
+                        <option value="descendente">Precio descendente</option>
+                    </optgroup>
+                    <optgroup label="Tipo de producto">                        
+                        <option  value="velas">Velas</option>
+                        <option  value="aceites">Aceites esenciales</option>
+                        <option  value="aromatizantes">Aromatizantes</option>
+                        <option  value="sahumerios">Sahumerios</option>
+                    </optgroup>
+                </select>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="pantalla-principal">
+                <div class="logo"><img src="./images/logoSinFondoRecortada.png" alt=""></div>
+                <button class="btn-productos">Productos</button>
+            </section> 
+
+            <section class="pantalla-productos">
+
+            </section>
+            
+            <section class="pantalla-demo">
+                
+            </section>
+        </main>
+        <footer class="pie-pagina">
+            <div class="redes">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+        <script src="./src/script.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #f1f1f2;
+    --color-botones: #1995AD;
+    --color-gris: #BCBABE;
+    --color-azulcito: #A1D6E2;
+    --color-botones-hover: #157083;
+    --color-header:rgb(199, 199, 202)2;
+}
+
+html{
+    height: 100vh;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pantalla-principal{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+
+.btn-productos{
+    height: 3em;
+    width: 7em;
+    background-color: var(--color-botones);
+    border-radius: .5em;
+    font-size: 1em;
+    color: var(--color-fondo);
+}
+
+.btn-productos:hover{
+    background-color: var(--color-botones-hover);
+    scale: 1;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.btn-productos:not(:hover){
+    transition: .3s ease-out;
+}
+
+
+.encabezado{
+    display: none;
+    width: 100%;
+    position: static;
+    border-bottom: 1px solid #ccc;
+}
+
+.encabezado nav{
+    height: 100%;
+    display: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .8em 0;
+}
+
+.encabezado nav i{
+    cursor: pointer;
+}
+
+.btn-atras{
+    height: auto;
+    width: 5em;
+    background-color: var(--color-header);
+    padding: 0;
+}
+
+.btn-atras .logobtn{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.search-bar, .filter-bar{
+    border-radius: .6em;
+    height: 2vw;
+    border: none;
+    margin: none;
+    font-size: .9em;
+}
+
+.search-bar{
+    width: 70%;
+}
+
+.search-bar:focus{
+    border: 1px solid #ccc;
+}
+
+.filter-bar{
+    width: 20%;
+}
+
+
+.pantalla-productos{
+    display: none;
+    width: 90%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+.product{
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: .5em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product:hover, .product:not(:hover){
+    -webkit-box-shadow: 1px 1px 32px -1px #00000055; 
+    box-shadow: 1px 1px 32px -1px #00000055 !important;
+    transition: .3s;
+}
+
+.product .imageDiv{
+    height: 50%;
+    border-bottom: 1px solid #ccc;
+}
+
+.product .imageDiv img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.pantalla-demo{
+    display: none;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.img-back{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2px;
+}
+
+.img-back i{
+    outline: 1px solid black;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.img1, .img2, .img-giga{
+    cursor: pointer;
+
+}
+
+.img1, .img2{
+    width: 100%;
+    height: 25%;
+    box-shadow: none;
+    margin:0;
+    padding: .3em;
+    object-fit: contain;
+    border: 1px solid #ccc;
+}
+
+.img-active{
+    border: 1px solid #000;
+}
+
+.div-img-giga{
+    width: 40%;
+    height: 100%;
+}
+
+.img-giga{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.producto-details{
+    width: 30%;
+    height: 100%;
+    outline: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+}
+
+.nombre-demo{
+    outline: 1px solid black;
+    width: 80%;
+    height: 10%;
+}
+
+.descripcion-demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid black;
+    width: 80%;
+    height: 55%;
+}
+
+.info-producto{
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stock-demo, .precio-demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 80%;
+    outline: 1px solid black;
+}
+
+
+.pie-pagina{
+    width: 100%;
+}
+
+.redes{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em;
+}
+
+.redes i{
+    border-radius: 50%;
+    font-size: 2.3em;
+    cursor: pointer;
+    color: var(--color-botones);
+}
+
+.redes i:hover{
+    color: var(--color-botones-hover);
+    scale: 1.1;
+    transition: .3s ease-in;
+}
+
+.redes i:not(:hover){
+    transition: .3s ease-out;
+}
